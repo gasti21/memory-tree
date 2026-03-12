@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pohon Kenangan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-leaves" id="floatingLeaves"></div>
+
+  <div class="intro-overlay" id="introOverlay">
+    <button class="seed-button" id="seedButton" aria-label="Mulai animasi">
+      <span class="seed-core"></span>
+      <span class="seed-text">sentuh untuk memulai</span>
+    </button>
+  </div>
+
+  <main class="page">
+    <section class="card">
+      <div class="hero">
+        <div class="eyebrow">halaman kecil yang dibuat khusus</div>
+        <div class="eyebrow">inura astrajingga</div>
+        <h1 class="title">Pohon Kenangan</h1>
+        <p class="subtitle">
+          Hal-hal baik tidak selalu datang dengan cara yang ramai.
+          Kadang, ia tumbuh pelan-pelan, lalu diam-diam menjadi berarti.
+        </p>
+      </div>
+
+      <div class="tree-wrap">
+        <svg viewBox="0 0 800 620" aria-label="Animasi pohon beringin">
+          <defs>
+            <linearGradient id="branchGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#5c4432" />
+              <stop offset="60%" stop-color="#7a5a40" />
+              <stop offset="100%" stop-color="#9a7451" />
+            </linearGradient>
+          </defs>
+
+          <ellipse class="ground" cx="400" cy="560" rx="190" ry="28"></ellipse>
+
+          <!-- batang utama beringin -->
+          <path class="branch delayed" style="--len: 320; --delay: 0.2s" stroke-width="24" d="M400 540 C398 495, 396 435, 400 360" />
+
+          <!-- akar gantung / akar bawah -->
+          <path class="branch delayed thin" style="--len: 120; --delay: 3.6s" stroke-width="5" d="M360 430 C352 468, 350 500, 350 530" />
+          <path class="branch delayed thin" style="--len: 140; --delay: 3.7s" stroke-width="5" d="M382 420 C378 458, 378 492, 380 535" />
+          <path class="branch delayed thin" style="--len: 140; --delay: 3.8s" stroke-width="5" d="M420 420 C422 460, 422 495, 420 538" />
+          <path class="branch delayed thin" style="--len: 120; --delay: 3.9s" stroke-width="5" d="M445 432 C450 470, 452 500, 452 530" />
+
+          <!-- cabang besar kiri kanan -->
+          <path class="branch delayed" style="--len: 220; --delay: 1s" stroke-width="15" d="M398 400 C350 370, 310 335, 270 285" />
+          <path class="branch delayed" style="--len: 220; --delay: 1.1s" stroke-width="15" d="M402 400 C450 370, 490 335, 530 285" />
+
+          <!-- cabang menengah -->
+          <path class="branch delayed" style="--len: 165; --delay: 1.7s" stroke-width="11" d="M300 320 C262 300, 235 272, 218 238" />
+          <path class="branch delayed" style="--len: 165; --delay: 1.85s" stroke-width="11" d="M500 320 C538 300, 565 272, 582 238" />
+          <path class="branch delayed" style="--len: 150; --delay: 2.05s" stroke-width="10" d="M350 345 C332 308, 320 274, 312 235" />
+          <path class="branch delayed" style="--len: 150; --delay: 2.2s" stroke-width="10" d="M450 345 C468 308, 480 274, 488 235" />
+
+          <!-- cabang atas -->
+          <path class="branch delayed" style="--len: 110; --delay: 2.55s" stroke-width="8" d="M235 255 C214 236, 198 216, 188 196" />
+          <path class="branch delayed" style="--len: 110; --delay: 2.65s" stroke-width="8" d="M565 255 C586 236, 602 216, 612 196" />
+          <path class="branch delayed" style="--len: 100; --delay: 2.8s" stroke-width="7" d="M315 245 C305 220, 296 198, 290 176" />
+          <path class="branch delayed" style="--len: 100; --delay: 2.95s" stroke-width="7" d="M485 245 C495 220, 504 198, 510 176" />
+          <path class="branch delayed" style="--len: 92; --delay: 3.1s" stroke-width="7" d="M388 238 C380 215, 374 193, 370 170" />
+          <path class="branch delayed" style="--len: 92; --delay: 3.2s" stroke-width="7" d="M412 238 C420 215, 426 193, 430 170" />
+
+          <!-- akar gantung dari kanopi -->
+          <path class="branch delayed thin" style="--len: 80; --delay: 4s" stroke-width="4" d="M290 220 C290 248, 290 276, 292 304" />
+          <path class="branch delayed thin" style="--len: 86; --delay: 4.1s" stroke-width="4" d="M338 205 C338 235, 338 270, 340 300" />
+          <path class="branch delayed thin" style="--len: 90; --delay: 4.2s" stroke-width="4" d="M462 205 C462 235, 462 270, 460 302" />
+          <path class="branch delayed thin" style="--len: 82; --delay: 4.3s" stroke-width="4" d="M510 220 C510 248, 510 278, 508 305" />
+
+          <!-- daun / kanopi beringin -->
+          <g class="canopy">
+            <ellipse class="leaf delayed" style="--delay: 2.2s" cx="245" cy="250" rx="42" ry="28" fill="#96a27f" />
+            <ellipse class="leaf delayed" style="--delay: 2.28s" cx="290" cy="220" rx="46" ry="30" fill="#aeb798" />
+            <ellipse class="leaf delayed" style="--delay: 2.36s" cx="340" cy="195" rx="48" ry="32" fill="#7d8b67" />
+            <ellipse class="leaf delayed" style="--delay: 2.44s" cx="398" cy="182" rx="54" ry="34" fill="#96a27f" />
+            <ellipse class="leaf delayed" style="--delay: 2.52s" cx="458" cy="195" rx="48" ry="32" fill="#aeb798" />
+            <ellipse class="leaf delayed" style="--delay: 2.6s" cx="510" cy="220" rx="46" ry="30" fill="#7d8b67" />
+            <ellipse class="leaf delayed" style="--delay: 2.68s" cx="555" cy="250" rx="42" ry="28" fill="#96a27f" />
+
+            <ellipse class="leaf delayed" style="--delay: 2.76s" cx="270" cy="290" rx="48" ry="30" fill="#7d8b67" />
+            <ellipse class="leaf delayed" style="--delay: 2.84s" cx="332" cy="275" rx="56" ry="34" fill="#96a27f" />
+            <ellipse class="leaf delayed" style="--delay: 2.92s" cx="400" cy="266" rx="64" ry="38" fill="#aeb798" />
+            <ellipse class="leaf delayed" style="--delay: 3s" cx="468" cy="275" rx="56" ry="34" fill="#96a27f" />
+            <ellipse class="leaf delayed" style="--delay: 3.08s" cx="530" cy="290" rx="48" ry="30" fill="#7d8b67" />
+
+            <ellipse class="leaf delayed" style="--delay: 3.16s" cx="315" cy="325" rx="50" ry="28" fill="#aeb798" />
+            <ellipse class="leaf delayed" style="--delay: 3.24s" cx="400" cy="322" rx="60" ry="30" fill="#96a27f" />
+            <ellipse class="leaf delayed" style="--delay: 3.32s" cx="485" cy="325" rx="50" ry="28" fill="#aeb798" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="panel-area">
+        <article class="note">
+          <h2 class="section-title">Catatan kecil</h2>
+          <div class="typewriter" id="typewriter"></div>
+          <button class="tap-btn" id="replayBtn">Putar teks lagi</button>
+        </article>
+
+        <aside class="counter">
+        <h2 class="section-title" id="countdownTitle">Menuju 22 Juli</h2>
+        <div class="time-label" id="countdownLabel">
+            Hitung mundur menuju hari ulang tahun jingga.
+        </div>
+        <div class="time-grid" id="countdownGrid">
+            <div class="time-box"><span class="num" id="days">0</span><span class="label">Hari</span></div>
+            <div class="time-box"><span class="num" id="hours">0</span><span class="label">Jam</span></div>
+            <div class="time-box"><span class="num" id="minutes">0</span><span class="label">Menit</span></div>
+            <div class="time-box"><span class="num" id="seconds">0</span><span class="label">Detik</span></div>
+        </div>
+        </aside>
+      </div>
+
+      <div class="footer">
+        Tumbuh pelan-pelan juga tetap tumbuh.
+      </div>
+    </section>
+  </main>
+
+  <div class="birthday-overlay hidden" id="birthdayOverlay">
+  <div class="birthday-center">
+    <button class="gift-box" id="giftBox" aria-label="Buka kado">
+      <span class="gift-lid"></span>
+      <span class="gift-ribbon-v"></span>
+      <span class="gift-ribbon-h"></span>
+      <span class="gift-body"></span>
+    </button>
+
+    <div class="letter-scene hidden" id="letterScene">
+      <div class="confetti confetti-left" id="confettiLeft"></div>
+      <div class="confetti confetti-right" id="confettiRight"></div>
+
+      <div class="letter-card" id="letterCard">
+        <div class="letter-top">untuk Indah Nuranny Khairunnisa</div>
+        <div class="letter-body" id="letterBody"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

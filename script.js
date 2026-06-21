@@ -12,16 +12,30 @@ const message = [
 ].join("\n");
 
 const birthdayLetterMessage = [
-  "Hai.",
+  "Hai, Jinggaa.",
   "",
-  "Hari ini adalah salah satu hari yang pantas dirayakan dengan banyak hal baik.",
+  "Akhirnya hari yang ditunggu datang juga ya.",
   "",
-  "Semoga langkahmu tahun ini terasa lebih ringan,",
-  "harimu lebih hangat,",
-  "dan hal-hal baik datang dengan cara yang paling indah.",
+  "Selamat ulang tahun.",
   "",
-  "Selamat ulang tahun."
-].join("\n");
+  "Aku tidak punya hadiah yang besar,",
+  "jadi untuk sekarang anggap saja halaman kecil ini sebagai salah satunya.",
+  "",
+  "Semoga hari-harimu ke depan dipenuhi lebih banyak tawa daripada sedih,",
+  "lebih banyak cerita baik daripada kecewa,",
+  "dan lebih banyak alasan untuk tersenyum tanpa dipaksa.",
+  "",
+  "Tetap jadi dirimu yang sekarang yaa.",
+  "Tetap tumbuh dengan caramu sendiri.",
+  "Tidak perlu terburu-buru menjadi apa pun.",
+  "",
+  "Dan kalau suatu saat harimu terasa berat,",
+  "ingat bahwa kamu sudah berhasil melewati banyak hal sampai sejauh ini.",
+  "",
+  "Terima kasih sudah hadir di dunia.",
+  "",
+  "Selamat ulang tahun, Jinggaa."
+].join(\"\\n\");
 
 const typewriterEl = document.getElementById("typewriter");
 const replayBtn = document.getElementById("replayBtn");
@@ -99,10 +113,10 @@ function getBirthdayStatus() {
     target = new Date(year + 1, 5, 22, 0, 0, 0);
   }
 
-return {
-  isBirthday: true,
-  diff: 0
-};
+  return {
+    isBirthday: false,
+    diff: target - now
+  };
 }
 
 function applyBirthdayState() {

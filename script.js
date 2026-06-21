@@ -14,7 +14,7 @@ const message = [
 const birthdayLetterMessage = [
   "Hai, Jinggaa.",
   "",
-  "Akhirnya hari yang ditunggu datang juga ya.",
+  "Akhirnya hari yang ditunggu datang juga yaa.",
   "",
   "Semoga hari-harimu ke depan dipenuhi lebih banyak tawa daripada sedih, lebih banyak cerita baik daripada kecewa dan lebih banyak alasan untuk tersenyum tanpa dipaksa.",
   "",
@@ -22,7 +22,7 @@ const birthdayLetterMessage = [
   "",
   "Dan kalau suatu saat harimu terasa berat, ingat bahwa kamu sudah berhasil melewati banyak hal sampai sejauh ini.",
   "",
-  "Terima kasih sudah hadir di dunia.",
+  "Terima kasih sudah hadir di dunia ini.",
   "",
   "Selamat ulang tahun, Jinggaa."
 ].join("\n");

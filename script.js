@@ -104,8 +104,8 @@ function getBirthdayStatus() {
   }
 
 return {
-  isBirthday: true,
-  diff: 0
+  isBirthday: false,
+  diff: target - now
 };
 }
 

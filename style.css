@@ -503,6 +503,7 @@ body.started .leaf.delayed {
 
 .letter-card {
   width: min(100%, 320px);
+  max-height: 80vh;
   background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(246,239,231,0.96));
   border: 1px solid rgba(139, 107, 74, 0.12);
   border-radius: 20px;
@@ -529,6 +530,10 @@ body.started .leaf.delayed {
   color: var(--brown-dark);
   line-height: 1.85;
   font-size: 0.98rem;
+
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 8px;
 }
 
 @keyframes letterRise {

@@ -85,7 +85,7 @@ function getBirthdayStatus() {
   const year = now.getFullYear();
 
   const startOfBirthday = new Date(year, 5, 22, 0, 0, 0);
-  const endOfBirthday = new Date(year, 5, 22, 23, 59, 59);
+  const endOfBirthday = new Date(year, 5, 22, 0, 0, 0);
 
   if (now >= startOfBirthday && now <= endOfBirthday) {
     return {

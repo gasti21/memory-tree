@@ -35,7 +35,7 @@ const birthdayLetterMessage = [
   "Terima kasih sudah hadir di dunia.",
   "",
   "Selamat ulang tahun, Jinggaa."
-].join(\"\\n\");
+].join("\n");
 
 const typewriterEl = document.getElementById("typewriter");
 const replayBtn = document.getElementById("replayBtn");

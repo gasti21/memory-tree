@@ -99,10 +99,10 @@ function getBirthdayStatus() {
     target = new Date(year + 1, 5, 22, 0, 0, 0);
   }
 
-  return {
-    isBirthday: false,
-    diff: target - now
-  };
+return {
+  isBirthday: true,
+  diff: 0
+};
 }
 
 function applyBirthdayState() {
